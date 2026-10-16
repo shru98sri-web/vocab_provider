@@ -1,0 +1,93 @@
+name: voca_builder_android
+description: "A clean vocabulary builder with AI and ML."
+publish_to: none
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & State
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  provider: ^6.1.5
+  shared_preferences: ^2.5.3
+  lottie: ^3.1.2
+  fl_chart: ^0.70.0
+  responsive_framework: ^1.5.1
+  carousel_slider: ^5.0.0
+
+  # Firebase (Use current unified versions or Firebase BOM)
+  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.3
+  cloud_firestore: ^5.5.0
+  firebase_app_check: ^0.3.1+8
+  firebase_messaging: ^15.1.5
+
+  # AI & ML (Modern, matching SDK)
+  google_generative_ai: ^0.4.6
+  google_ml_kit: ^0.18.0
+  speech_to_text: ^7.0.0
+  flutter_tts: ^4.2.2
+
+  # Audio & Media (Keep only ONE audio engine to avoid native Gradle duplication)
+  just_audio: ^0.9.42
+  audio_session: ^0.1.24
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+  permission_handler: ^11.3.1
+
+  # Network & Utils
+  http: ^1.2.2
+  dio: ^5.7.0
+  fluttertoast: ^8.2.8
+  pdf: ^3.10.4
+  printing: ^5.11.1
+  share_plus: ^10.1.4
+
+    # --- REQUIRED FOR LOCAL NOTIFICATIONS ---
+  flutter_local_notifications: ^17.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/Logo.png
+    - assets/Splash_Screen.png
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "Logo.png" # अ‍ॅसेट्सच्या पाथशी जुळणारा पाथ ठेवा
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "Logo.png"
+    background_color: "#ffffff" # वास्तविक हेक्स कोड टाका
+    theme_color: "#01579b"      # वास्तविक हेक्स कोड टाका
+  windows:
+    generate: true
+    image_path: "Logo.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "Logo.png"
+
+flutter_native_splash:
+  color: "#ffffff"               # Background color of splash screen
+  image: Splash_Screen.png # Path to your logo asset
+
+  android_12:
+    image: Splash_Screen.png
+    color: "#ffffff"
+
+  web: false
